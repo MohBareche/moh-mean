@@ -1,0 +1,62 @@
+<!-- DATA BINDING -->
+
+<h3>{{ title }}</h3>
+
+<img [src]="imgUrl" alt="Exemple" class="mr-5">
+
+<button (click)="onClickHandler(hero)" class="ml-5 btn btn-primary">Click Me</button>
+
+<input class="form-control" [(ngModel)]="hero.name" type="text">
+
+<!-- END DATA BINDING -->
+
+<!-- PIPES -->
+
+<p> {{ hero.name | lowercase }} </p> <!-- lowercase -->
+<p> {{ hero.name | uppercase }} </p> <!-- UPERCASE -->
+<p> {{ hero.name | titlecase }} </p> <!-- Capitalize -->
+<p> {{ hero.salary | currency }} </p> <!-- currency -->
+<p> {{ hero.salary | currency:'CAD':'symbol':'4.2-2':'fr' }} </p> <!-- currency perso -->
+<p> {{ hero.joinDate | date:'dd MMMM yyyy' }} </p> <!-- date perso -->
+<p> {{ hero.joinDate | date:'yyyy-MM-dd' }} </p> <!-- date perso -->
+
+<!-- END PIPES -->
+
+<!-- DIRECTIVES -->
+
+<ul>
+  <li *ngFor="let hero of heros"> {{ hero.name }} </li>
+</ul>
+
+<div [ngStyle]="{'color': 'red', 'text-align':'center','font-size':'2em'}">Hello Mohamed</div>
+<div [ngStyle]="currentStyles">Bienvenue chez moi</div>
+
+<div *ngIf="hero" class="name"> {{ hero.name }} </div>
+
+<!-- END DIRECTIVES -->
+
+<!-- SERVICES -->
+<h3>Services</h3>
+<pre>
+    <code [innerHTML]="codeService"></code>
+</pre>
+
+
+
+<!-- END SERVICES -->
+
+<!-- INLINE TEMPLATE (-it) | INLINE STYLE (-is) | SKIP TESTS (--skipTests)  -->
+
+<h3>Templates, styles et fichiers de tests</h3>
+<pre>
+    <code [innerHTML]="codeTemplate"></code>
+</pre>
+
+<!-- END INLINE TEMPLATE - INLINE STYLE - SKIP TESTS  -->
+
+<!-- TEST A BLANC -->
+<h3>Test à blanc</h3>
+<pre>
+    --dry-run  comme option
+</pre>
+<!-- END TEST A BLANC -->

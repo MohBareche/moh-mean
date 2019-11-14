@@ -1,0 +1,28 @@
+###
+# Post Register
+
+POST http://localhost:8080/api/users/register
+Content-Type: application/json
+
+{
+    "name":"Adam 19",
+    "email":"adam19@yahoo.ca",
+    "password":"123456"
+}
+
+###
+# Login 
+
+POST http://localhost:8080/api/users/login
+Content-Type: application/json
+
+{
+    "email":"adam19@yahoo.ca",
+    "password":"123456"
+}
+
+###
+# Post a new post 
+
+POST  http://localhost:8080/api/users/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjVkY2M2Yjc4N2IwZDQxMjIyMDg1Yjc5NiIsIm5hbWUiOiJBZGFtIDE5IiwiZW1haWwiOiJhZGFtMTlAeWFob28uY2EiLCJwYXNzd29yZCI6IiQyYSQxMCQ4c2RXSVJCU2pTUncxRFY1Y3V2U1R1eDMyaVNJdmowbGMubmtURDFraFBCYmJFeFJ3eFJxYSIsImRhdGVDcmVhdGVkIjoiMjAxOS0xMS0xM1QyMDo0NTo0NC4yNzVaIiwiX192IjowfSwiaWF0IjoxNTczNjc4MTA0LCJleHAiOjE1NzM2NzgxOTB9.pB0doOoUuPLJ64d0MwJAJvzePxIufxn_-MaoiXUx4dw
