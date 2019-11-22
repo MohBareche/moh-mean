@@ -15,7 +15,7 @@ import {
 } from './config/passport-jwt';
 
 // Déclaration de variable du port
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4000;
 
 // Import Routes
 import userRouter from './routes/users';
